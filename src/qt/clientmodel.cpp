@@ -211,9 +211,9 @@ void ClientModel::getGasInfo(uint64_t& blockGasLimit, uint64_t& minGasPrice, uin
 {
     LOCK(cs_main);
 
-    QtumDGP qtumDGP(globalState.get(), fGettingValuesDGP);
-    blockGasLimit = qtumDGP.getBlockGasLimit(chainActive.Height());
-    minGasPrice = CAmount(qtumDGP.getMinGasPrice(chainActive.Height()));
+    BerycoinDGP berycoinDGP(globalState.get(), fGettingValuesDGP);
+    blockGasLimit = berycoinDGP.getBlockGasLimit(chainActive.Height());
+    minGasPrice = CAmount(berycoinDGP.getMinGasPrice(chainActive.Height()));
     nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
 }
 

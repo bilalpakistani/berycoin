@@ -84,7 +84,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>BerycoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Cysoni â'r rhwydwaith...</translation>
@@ -154,8 +154,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Qtum</source>
-        <translation>Qtum</translation>
+        <source>Berycoin</source>
+        <translation>Berycoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -634,14 +634,14 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>berycoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Qtum Core</source>
-        <translation>Craidd Qtum</translation>
+        <source>Berycoin Core</source>
+        <translation>Craidd Berycoin</translation>
     </message>
     <message>
         <source>Information</source>

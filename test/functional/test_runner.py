@@ -121,43 +121,43 @@ BASE_SCRIPTS= [
     'resendwallettransactions.py',
     'minchainwork.py',
 
-    # qtum
-    'qtum-dgp.py',
-    'qtum-pos.py',
-    'qtum-opcall.py',
-    'qtum-opcreate.py',
-    'qtum-8mb-block.py',
-    'qtum-gas-limit.py',
-    'qtum-searchlog.py',
-    'qtum-pos-segwit.py',
-    'qtum-state-root.py',
-    'qtum-evm-globals.py',
-    'qtum-null-sender.py',
-    'qtum-waitforlogs.py',
-    'qtum-block-header.py',
-    'qtum-callcontract.py',
-    'qtum-spend-op-call.py',
-    'qtum-condensing-txs.py',
-    'qtum-createcontract.py',
-    'qtum-sendtocontract.py',
-    'qtum-identical-refunds.py',
-    'qtum-create-eth-op-code.py',
-    'qtum-gas-limit-overflow.py',
-    'qtum-call-empty-contract.py',
-    'qtum-dgp-block-size-sync.py',
-    'qtum-pos-conflicting-txs.py',
-    'qtum-globals-state-changer.py',
-    'qtum-no-exec-call-disabled.py',
-    'qtum-soft-block-gas-limits.py',
-    'qtum-dgp-block-size-restart.py',
-    'qtum-searchlog-restart-node.py',
-    'qtum-immature-coinstake-spend.py',
-    'qtum-transaction-prioritization.py',
-    'qtum-assign-mpos-fees-to-gas-refund.py',
-    'qtum-ignore-mpos-participant-reward.py',
-    'qtum-many-value-refunds-from-same-tx.py',
-    'qtum-combined-outputs-exceed-gas-limit.py',
-    'qtum-dgp-gas-price-lingering-mempool-tx.py',
+    # berycoin
+    'berycoin-dgp.py',
+    'berycoin-pos.py',
+    'berycoin-opcall.py',
+    'berycoin-opcreate.py',
+    'berycoin-8mb-block.py',
+    'berycoin-gas-limit.py',
+    'berycoin-searchlog.py',
+    'berycoin-pos-segwit.py',
+    'berycoin-state-root.py',
+    'berycoin-evm-globals.py',
+    'berycoin-null-sender.py',
+    'berycoin-waitforlogs.py',
+    'berycoin-block-header.py',
+    'berycoin-callcontract.py',
+    'berycoin-spend-op-call.py',
+    'berycoin-condensing-txs.py',
+    'berycoin-createcontract.py',
+    'berycoin-sendtocontract.py',
+    'berycoin-identical-refunds.py',
+    'berycoin-create-eth-op-code.py',
+    'berycoin-gas-limit-overflow.py',
+    'berycoin-call-empty-contract.py',
+    'berycoin-dgp-block-size-sync.py',
+    'berycoin-pos-conflicting-txs.py',
+    'berycoin-globals-state-changer.py',
+    'berycoin-no-exec-call-disabled.py',
+    'berycoin-soft-block-gas-limits.py',
+    'berycoin-dgp-block-size-restart.py',
+    'berycoin-searchlog-restart-node.py',
+    'berycoin-immature-coinstake-spend.py',
+    'berycoin-transaction-prioritization.py',
+    'berycoin-assign-mpos-fees-to-gas-refund.py',
+    'berycoin-ignore-mpos-participant-reward.py',
+    'berycoin-many-value-refunds-from-same-tx.py',
+    'berycoin-combined-outputs-exceed-gas-limit.py',
+    'berycoin-dgp-gas-price-lingering-mempool-tx.py',
 ]
 
 EXTENDED_SCRIPTS = [
@@ -174,7 +174,7 @@ EXTENDED_SCRIPTS = [
     'bip68-sequence.py',
     'getblocktemplate_longpoll.py',
     'p2p-timeouts.py',
-    # Version <4 blocks are never allowed in regtest on qtum
+    # Version <4 blocks are never allowed in regtest on berycoin
     'bipdersig-p2p.py',
     'bip65-cltv-p2p.py',
     'p2p-acceptblock.py',
@@ -307,8 +307,8 @@ def main():
 def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_coverage=False, args=[]):
     # Warn if bitcoind is already running (unix only)
     try:
-        if subprocess.check_output(["pidof", "qtumd"]) is not None:
-            print("%sWARNING!%s There is already a qtumd process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
+        if subprocess.check_output(["pidof", "berycoind"]) is not None:
+            print("%sWARNING!%s There is already a berycoind process running on this system. Tests may fail unexpectedly due to resource contention!" % (BOLD[1], BOLD[0]))
     except (OSError, subprocess.SubprocessError):
         pass
 

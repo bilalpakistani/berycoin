@@ -1,0 +1,6 @@
+usr/local/bin/berycoin-qt usr/bin
+share/pixmaps/berycoin32.xpm usr/share/pixmaps
+share/pixmaps/berycoin16.xpm usr/share/pixmaps
+share/pixmaps/berycoin128.png usr/share/pixmaps
+debian/berycoin-qt.desktop usr/share/applications
+debian/berycoin-qt.protocol usr/share/kde4/services/

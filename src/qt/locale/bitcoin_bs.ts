@@ -12,10 +12,10 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>BerycoinGUI</name>
     <message>
-        <source>Qtum</source>
-        <translation>Qtum</translation>
+        <source>Berycoin</source>
+        <translation>Berycoin</translation>
     </message>
     </context>
 <context>
@@ -154,10 +154,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>berycoin-core</name>
     <message>
-        <source>Qtum Core</source>
-        <translation>Qtum Jezrga</translation>
+        <source>Berycoin Core</source>
+        <translation>Berycoin Jezrga</translation>
     </message>
     </context>
 </TS>

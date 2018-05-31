@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bitcoin Core
+Comment=Connect to the Berycoin P2P Network
+Exec=berycoin-qt %u
+Terminal=false
+Type=Application
+Icon=berycoin128
+MimeType=x-scheme-handler/berycoin;
+Categories=Office;Finance;

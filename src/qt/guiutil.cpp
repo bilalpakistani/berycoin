@@ -127,7 +127,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Qtum address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a Berycoin address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
@@ -146,7 +146,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("qtum"))
+    if(!uri.isValid() || uri.scheme() != QString("berycoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -210,9 +210,9 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("qtum://", Qt::CaseInsensitive))
+    if(uri.startsWith("berycoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 7, "qtum:"); // QTUM: change string length to 7 to correctly parse qtum://
+        uri.replace(0, 7, "berycoin:"); // BERYCOIN: change string length to 7 to correctly parse berycoin://
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -220,7 +220,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("qtum:%1").arg(info.address);
+    QString ret = QString("berycoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -627,10 +627,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Qtum.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Berycoin.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Qtum (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Qtum (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "Berycoin (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Berycoin (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -725,8 +725,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "qtum.desktop";
-    return GetAutostartDir() / strprintf("qtum-%s.lnk", chain);
+        return GetAutostartDir() / "berycoin.desktop";
+    return GetAutostartDir() / strprintf("berycoin-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -769,9 +769,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Qtum\n";
+            optionFile << "Name=Berycoin\n";
         else
-            optionFile << strprintf("Name=Qtum (%s)\n", chain);
+            optionFile << strprintf("Name=Berycoin (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
