@@ -29,7 +29,7 @@ Build Build Berycoin Core
 
 1. Clone the berycoin source code and cd into `berycoin`
 
-        git clone --recursive https://github.com/berycoinproject/berycoin.git
+        git clone --recursive https://github.com/berycoin-project/berycoin.git
         cd berycoin
         git submodule update --init --recursive
 

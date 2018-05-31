@@ -17,8 +17,8 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/berycoinproject/berycoin
-ethurl=https://github.com/berycoinproject/cpp-eth-berycoin
+url=https://github.com/berycoin-project/berycoin
+ethurl=https://github.com/berycoin-project/cpp-eth-berycoin
 proc=2
 mem=2000
 lxc=true
@@ -40,7 +40,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/berycoinproject/berycoin
+-u|--url	Specify the URL of the repository. Default is https://github.com/berycoin-project/berycoin
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -218,8 +218,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/berycoinproject/gitian.sigs.git
-    git clone https://github.com/berycoinproject/berycoin-detached-sigs.git
+    git clone https://github.com/berycoin-project/gitian.sigs.git
+    git clone https://github.com/berycoin-project/berycoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]

@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/berycoinproject/berycoin-detached-sigs.git"
+- "url": "https://github.com/berycoin-project/berycoin-detached-sigs.git"
   "dir": "signature"
 files:
 - "berycoin-osx-unsigned.tar.gz"

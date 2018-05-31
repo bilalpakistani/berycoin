@@ -3,7 +3,7 @@
 
 #include <QObject>
 
-#define BERYCOIN_RELEASES "https://github.com/berycoinproject/berycoin/releases"
+#define BERYCOIN_RELEASES "https://github.com/berycoin-project/berycoin/releases"
 
 class Version {
 

@@ -27,8 +27,8 @@ Build-Depends: debhelper,
  libzmq3-dev
 Standards-Version: 3.9.2
 Homepage: https://berycoin.org/
-Vcs-Git: git://github.com/berycoinproject/berycoin.git
-Vcs-Browser: https://github.com/berycoinproject/berycoin
+Vcs-Git: git://github.com/berycoin-project/berycoin.git
+Vcs-Browser: https://github.com/berycoin-project/berycoin
 
 Package: berycoind
 Architecture: any

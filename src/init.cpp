@@ -542,7 +542,7 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/berycoinproject/berycoin>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/berycoin-project/berycoin>";
     const std::string URL_WEBSITE = "<https://berycoin.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i"), COPYRIGHT_YEAR) + " ") + "\n" +

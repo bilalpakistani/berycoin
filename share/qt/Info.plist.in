@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.berycoinproject.Berycoin-Qt</string>
+  <string>org.berycoin-project.Berycoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>

@@ -33,9 +33,9 @@ packages:
 - "libmicrohttpd-dev"
 - "libminiupnpc-dev"
 remotes:
-- "url": "https://github.com/berycoinproject/berycoin.git"
+- "url": "https://github.com/berycoin-project/berycoin.git"
   "dir": "berycoin"
-- "url": "https://github.com/berycoinproject/cpp-eth-berycoin.git"
+- "url": "https://github.com/berycoin-project/cpp-eth-berycoin.git"
   "dir": "cpp-eth-berycoin"
 files: []
 script: |
