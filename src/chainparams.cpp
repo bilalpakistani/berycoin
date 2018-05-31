@@ -123,7 +123,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 985500; // berycoin halving every 4 years
+        consensus.nSubsidyHalvingInterval = 52596000; // berycoin does not half, staking rewards end in 100 years
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0x0000c2a7473c208ffc7fa57e3b847632fd146dfc40b0ab59e67e7af57497e482");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
