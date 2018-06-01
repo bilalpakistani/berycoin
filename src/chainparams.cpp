@@ -170,7 +170,7 @@ public:
         nPruneAfterHeight = 100000;
         startNewChain = false;
 
-        genesis = CreateGenesisBlock(1527818643, 43469, 0x1f00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1527818643, 43469, 0x1f00ffff, 1, 950 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
@@ -267,9 +267,9 @@ public:
         pchMessageStart[3] = 0x2d;
         nDefaultPort = 19947;
         nPruneAfterHeight = 1000;
-        startNewChain = false;
+        startNewChain = true;
 
-        genesis = CreateGenesisBlock(1527818883, 128726, 0x1f00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1527818883, 128726, 0x1f00ffff, 1, 950 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
