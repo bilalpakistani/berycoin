@@ -125,7 +125,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 52596000; // berycoin does not half, staking rewards end in 100 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x00002f0e748216be32615725b0e0de929a6f1926ac39efd59e70ebb9eca3ef54");
+        consensus.BIP34Hash = uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -155,7 +155,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000"); // berycoin
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x00002f0e748216be32615725b0e0de929a6f1926ac39efd59e70ebb9eca3ef54"); //453354
+        consensus.defaultAssumeValid = uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e"); //453354
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -168,16 +168,16 @@ public:
         pchMessageStart[3] = 0xfd;
         nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
-        startNewChain = true;
+        startNewChain = false;
 
-        genesis = CreateGenesisBlock(1527818643, 43469, 0x1f00ffff, 1, 950 * COIN);
+        genesis = CreateGenesisBlock(1527889500, 5344, 0x1f00ffff, 1, 950 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00002f0e748216be32615725b0e0de929a6f1926ac39efd59e70ebb9eca3ef54"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc367da33e39278dcca67a5aaf8ec24fd494bd4d359fbccd705eab71bacc9c67c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e"));
+        assert(genesis.hashMerkleRoot == uint256S("0x1618af4a99e28c1d71df78590a23889d14f1101cfac126bbbe7598abbea27943"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("dnsseed.berycoin.com", true); // Berycoin mainnet
@@ -199,7 +199,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                { 0, uint256S("0x00002f0e748216be32615725b0e0de929a6f1926ac39efd59e70ebb9eca3ef54")},
+                { 0, uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e")},
             }
         };
 
