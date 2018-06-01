@@ -166,7 +166,7 @@ public:
         pchMessageStart[1] = 0xcf;
         pchMessageStart[2] = 0xa6;
         pchMessageStart[3] = 0xd3;
-        nDefaultPort = 3888;
+        nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
         startNewChain = false;
 
@@ -262,7 +262,7 @@ public:
         pchMessageStart[1] = 0x22;
         pchMessageStart[2] = 0x15;
         pchMessageStart[3] = 0x06;
-        nDefaultPort = 13888;
+        nDefaultPort = 19947;
         nPruneAfterHeight = 1000;
         startNewChain = false;
 
@@ -357,7 +357,7 @@ public:
         pchMessageStart[1] = 0xdd;
         pchMessageStart[2] = 0xc6;
         pchMessageStart[3] = 0xe1;
-        nDefaultPort = 23888;
+        nDefaultPort = 29947;
         nPruneAfterHeight = 1000;
         startNewChain = false;
 
