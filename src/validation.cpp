@@ -1259,8 +1259,8 @@ bool ReadFromDisk(CMutableTransaction& tx, CDiskTxPos& txindex, CBlockTreeDB& tx
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-    if(nHeight <= consensusParams.nLastPOWBlock)
-        return 950 * COIN;
+    //if(nHeight <= consensusParams.nLastPOWBlock)
+    //    return 950 * COIN;
     if(nHeight == 1)
         return 10000000000 * COIN;
     int halvings = (nHeight - consensusParams.nLastPOWBlock - 1) / consensusParams.nSubsidyHalvingInterval;
