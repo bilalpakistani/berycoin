@@ -229,7 +229,7 @@ public:
         strNetworkID = "test";
         consensus.nSubsidyHalvingInterval = 985500; // berycoin halving every 4 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x0000d33e8f112f4474f9c03e7fecd13a4c6f0e0216a8c5d0c783370038bf2a91");
+        consensus.BIP34Hash = uint256S("0x000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84");
         consensus.BIP65Height = 0; // 00000000007f6655f22f98e72ed80d8b06dc761d5da09df0fa1dc4be4f861eb6
         consensus.BIP66Height = 0; // 000000002104c8c45e99a8853285a3b592602a3ccde2b832481da85e9e4ba182
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -259,7 +259,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000d6e528bcf5a3a556f"); // berycoin
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x0000d33e8f112f4474f9c03e7fecd13a4c6f0e0216a8c5d0c783370038bf2a91"); //1079274
+        consensus.defaultAssumeValid = uint256S("0x000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84"); //1079274
 
         pchMessageStart[0] = 0x0d;
         pchMessageStart[1] = 0x22;
@@ -267,16 +267,16 @@ public:
         pchMessageStart[3] = 0x06;
         nDefaultPort = 19947;
         nPruneAfterHeight = 1000;
-        startNewChain = true;
+        startNewChain = false;
 
-        genesis = CreateGenesisBlock(1527794455, 36776, 0x1f00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1527818883, 128726, 0x1f00ffff, 1, 50 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000d33e8f112f4474f9c03e7fecd13a4c6f0e0216a8c5d0c783370038bf2a91"));
-        assert(genesis.hashMerkleRoot == uint256S("0xed34050eb5909ee535fcb07af292ea55f3d2f291187617b44d3282231405b96d"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc367da33e39278dcca67a5aaf8ec24fd494bd4d359fbccd705eab71bacc9c67c"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -298,7 +298,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0000d33e8f112f4474f9c03e7fecd13a4c6f0e0216a8c5d0c783370038bf2a91")},
+                {0, uint256S("000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84")},
             }
         };
 
@@ -362,7 +362,7 @@ public:
         pchMessageStart[3] = 0xe1;
         nDefaultPort = 29947;
         nPruneAfterHeight = 1000;
-        startNewChain = false;
+        startNewChain = true;
 
         genesis = CreateGenesisBlock(1527794906, 0, 0x207fffff, 1, 50 * COIN);
 
