@@ -328,7 +328,7 @@ public:
         strNetworkID = "regtest";
         consensus.nSubsidyHalvingInterval = 150;
         consensus.BIP34Height = 0; // BIP34 has not activated on regtest (far in the future so block v1 are not rejected in tests) // activate for berycoin
-        consensus.BIP34Hash = uint256S("0x694acfe226445305d3eb178332fe0f8b03ef21c7e761efe8dfd471ea541dec77");
+        consensus.BIP34Hash = uint256S("0x6181dbb9746be7fc32a0e5835fdab2a2eeae85e2d6a11327d0d0e143f541491a");
         consensus.BIP65Height = 0; // BIP65 activated on regtest (Used in rpc activation tests)
         consensus.BIP66Height = 0; // BIP66 activated on regtest (Used in rpc activation tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -364,14 +364,14 @@ public:
         nPruneAfterHeight = 1000;
         startNewChain = true;
 
-        genesis = CreateGenesisBlock(1527794906, 0, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1527819111, 1, 0x207fffff, 1, 50 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x694acfe226445305d3eb178332fe0f8b03ef21c7e761efe8dfd471ea541dec77"));
-        assert(genesis.hashMerkleRoot == uint256S("0xed34050eb5909ee535fcb07af292ea55f3d2f291187617b44d3282231405b96d"));
+        assert(consensus.hashGenesisBlock == uint256S("0x6181dbb9746be7fc32a0e5835fdab2a2eeae85e2d6a11327d0d0e143f541491a"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc367da33e39278dcca67a5aaf8ec24fd494bd4d359fbccd705eab71bacc9c67c"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -382,7 +382,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0x694acfe226445305d3eb178332fe0f8b03ef21c7e761efe8dfd471ea541dec77")},
+                {0, uint256S("0x6181dbb9746be7fc32a0e5835fdab2a2eeae85e2d6a11327d0d0e143f541491a")},
             }
         };
 
