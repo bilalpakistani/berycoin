@@ -162,10 +162,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xf1;
-        pchMessageStart[1] = 0xcf;
-        pchMessageStart[2] = 0xa6;
-        pchMessageStart[3] = 0xd3;
+        pchMessageStart[0] = 0xac;
+        pchMessageStart[1] = 0x3e;
+        pchMessageStart[2] = 0xd3;
+        pchMessageStart[3] = 0xfd;
         nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
         startNewChain = false;
@@ -185,11 +185,11 @@ public:
         vSeeds.emplace_back("bago.resteemexposure.com", true); // Berycoin mainnet
         vSeeds.emplace_back("bilal.myfxstore.com", true); // Berycoin mainnet
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,58);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,50);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,20);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,216);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x05, 0x86, 0xc2, 0x2e};
+        base58Prefixes[EXT_SECRET_KEY] = {0x05, 0x86, 0xdc, 0xf1};
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -205,8 +205,8 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block a1bab8db27f26952ce94fff6563931943554e36fc3a23f99cc8513270d685b2c (height 92662)
-            1517516912, // * UNIX timestamp of last known number of transactions
-            904678, // * total number of transactions between genesis and that timestamp
+            0, // * UNIX timestamp of last known number of transactions
+            0, // * total number of transactions between genesis and that timestamp
                             //   (the tx=... number in the SetBestChain debug.log lines)
             0.125 // * estimated number of transactions per second after that timestamp
         };
@@ -261,10 +261,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84"); //1079274
 
-        pchMessageStart[0] = 0x0d;
-        pchMessageStart[1] = 0x22;
-        pchMessageStart[2] = 0x15;
-        pchMessageStart[3] = 0x06;
+        pchMessageStart[0] = 0xac;
+        pchMessageStart[1] = 0xb2;
+        pchMessageStart[2] = 0xd5;
+        pchMessageStart[3] = 0x2d;
         nDefaultPort = 19947;
         nPruneAfterHeight = 1000;
         startNewChain = false;
@@ -283,11 +283,11 @@ public:
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("berycoin4.dynu.net", false); // Berycoin testnet
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,120);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,110);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,11);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,106);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,229);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x05, 0x37, 0x82, 0xBF};
+        base58Prefixes[EXT_SECRET_KEY] = {0x05, 0x37, 0x84, 0xA4};
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -356,10 +356,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfd;
-        pchMessageStart[1] = 0xdd;
-        pchMessageStart[2] = 0xc6;
-        pchMessageStart[3] = 0xe1;
+        pchMessageStart[0] = 0xaa;
+        pchMessageStart[1] = 0xbd;
+        pchMessageStart[2] = 0xaf;
+        pchMessageStart[3] = 0xd1;
         nDefaultPort = 29947;
         nPruneAfterHeight = 1000;
         startNewChain = true;
@@ -397,11 +397,11 @@ public:
 
         consensus.nFixUTXOCacheHFHeight=0;
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,120);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,110);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,113);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,123);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,202);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x05, 0x39, 0x81, 0xAB};
+        base58Prefixes[EXT_SECRET_KEY] = {0x05, 0x39, 0x85, 0x2C};
     }
 };
 
