@@ -58,7 +58,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Trump’s tough talk may help Pakistan keep top talent February 5, 2018";
-    const CScript genesisOutputScript = CScript() << ParseHex("040d61d8653448c98731ee5fffd303c15e71ec2057b77f11ab3601979728cdaff2d68afbba14e4fa0bc44f2072b0b23ef63717f8cdfbe58dcd33f32b6afe98741a") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("04b6ce0b255740891c56ac3b298695bad5449dcc216259f79a5fab81c18f7f3fcd5e9c1471b4c7eb7df6a94ed71aee6255be9a18d75c0dc59c9392c6a1cba2e515") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -168,7 +168,7 @@ public:
         pchMessageStart[3] = 0xfd;
         nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
-        startNewChain = false;
+        startNewChain = true;
 
         genesis = CreateGenesisBlock(1527889500, 5344, 0x1f00ffff, 1, 950 * COIN);
 
