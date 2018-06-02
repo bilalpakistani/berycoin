@@ -125,7 +125,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 52596000; // berycoin does not half, staking rewards end in 100 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e");
+        consensus.BIP34Hash = uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -155,7 +155,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000"); // berycoin
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e"); //453354
+        consensus.defaultAssumeValid = uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f"); //453354
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -168,16 +168,16 @@ public:
         pchMessageStart[3] = 0xfd;
         nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
-        startNewChain = true;
+        startNewChain = false;
 
-        genesis = CreateGenesisBlock(1527889500, 5344, 0x1f00ffff, 1, 950 * COIN);
+        genesis = CreateGenesisBlock(1527935995, 34419, 0x1f00ffff, 1, 950 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e"));
-        assert(genesis.hashMerkleRoot == uint256S("0x1618af4a99e28c1d71df78590a23889d14f1101cfac126bbbe7598abbea27943"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe233566523dd01e17b9be5b69980c2b7b3b45cf392fb77acae3c0caa76656113"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("dnsseed.berycoin.com", false); // Berycoin mainnet
@@ -199,7 +199,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                { 0, uint256S("0x000046b389f60a27005f2490154525b745f57192d0380234d79df9c54e26366e")},
+                { 0, uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f")},
             }
         };
 
@@ -227,9 +227,9 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 985500; // berycoin halving every 4 years
+        consensus.nSubsidyHalvingInterval = 52596000; // berycoin halving every 4 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84");
+        consensus.BIP34Hash = uint256S("0x000033f54e106a9eee3872c115a46396ba29ce833feb469c4f8a00f6b8b356f4");
         consensus.BIP65Height = 0; // 00000000007f6655f22f98e72ed80d8b06dc761d5da09df0fa1dc4be4f861eb6
         consensus.BIP66Height = 0; // 000000002104c8c45e99a8853285a3b592602a3ccde2b832481da85e9e4ba182
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -256,10 +256,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000d6e528bcf5a3a556f"); // berycoin
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000"); // berycoin
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84"); //1079274
+        consensus.defaultAssumeValid = uint256S("0x000033f54e106a9eee3872c115a46396ba29ce833feb469c4f8a00f6b8b356f4"); //1079274
 
         pchMessageStart[0] = 0xac;
         pchMessageStart[1] = 0xb2;
@@ -267,16 +267,16 @@ public:
         pchMessageStart[3] = 0x2d;
         nDefaultPort = 19947;
         nPruneAfterHeight = 1000;
-        startNewChain = true;
+        startNewChain = false;
 
-        genesis = CreateGenesisBlock(1527818883, 128726, 0x1f00ffff, 1, 950 * COIN);
+        genesis = CreateGenesisBlock(1527936122, 37937, 0x1f00ffff, 1, 950 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc367da33e39278dcca67a5aaf8ec24fd494bd4d359fbccd705eab71bacc9c67c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000033f54e106a9eee3872c115a46396ba29ce833feb469c4f8a00f6b8b356f4"));
+        assert(genesis.hashMerkleRoot == uint256S("0xe233566523dd01e17b9be5b69980c2b7b3b45cf392fb77acae3c0caa76656113"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -298,7 +298,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("000057192fdacc056d6798bd3b7784d560d58a73db8b672c33b150580729ac84")},
+                {0, uint256S("0x000033f54e106a9eee3872c115a46396ba29ce833feb469c4f8a00f6b8b356f4")},
             }
         };
 
@@ -326,9 +326,9 @@ class CRegTestParams : public CChainParams {
 public:
     CRegTestParams() {
         strNetworkID = "regtest";
-        consensus.nSubsidyHalvingInterval = 150;
+        consensus.nSubsidyHalvingInterval = 52596000;
         consensus.BIP34Height = 0; // BIP34 has not activated on regtest (far in the future so block v1 are not rejected in tests) // activate for berycoin
-        consensus.BIP34Hash = uint256S("0x6181dbb9746be7fc32a0e5835fdab2a2eeae85e2d6a11327d0d0e143f541491a");
+        consensus.BIP34Hash = uint256S("0x6698df7db11accf49bc5f4e066038550c84b21254e70656dbe6fd31c5d721d9a");
         consensus.BIP65Height = 0; // BIP65 activated on regtest (Used in rpc activation tests)
         consensus.BIP66Height = 0; // BIP66 activated on regtest (Used in rpc activation tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -362,16 +362,16 @@ public:
         pchMessageStart[3] = 0xd1;
         nDefaultPort = 29947;
         nPruneAfterHeight = 1000;
-        startNewChain = true;
+        startNewChain = false;
 
-        genesis = CreateGenesisBlock(1527819111, 1, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1527936226, 1, 0x207fffff, 1, 50 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x6181dbb9746be7fc32a0e5835fdab2a2eeae85e2d6a11327d0d0e143f541491a"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc367da33e39278dcca67a5aaf8ec24fd494bd4d359fbccd705eab71bacc9c67c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x6698df7db11accf49bc5f4e066038550c84b21254e70656dbe6fd31c5d721d9a"));
+        assert(genesis.hashMerkleRoot == uint256S("0xcad82fd7c1c035e0b7895c8a6fa6ee4254ba02e523563c4e4f6f968cd05ad669"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
@@ -382,7 +382,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0x6181dbb9746be7fc32a0e5835fdab2a2eeae85e2d6a11327d0d0e143f541491a")},
+                {0, uint256S("0x6698df7db11accf49bc5f4e066038550c84b21254e70656dbe6fd31c5d721d9a")},
             }
         };
 
