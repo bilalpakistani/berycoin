@@ -125,7 +125,7 @@ public:
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 52596000; // berycoin does not half, staking rewards end in 100 years
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f");
+        consensus.BIP34Hash = uint256S("0x000039fee49436667b67e73213ceb564f08877929b140af55526b43d1f1bbcb0");
         consensus.BIP65Height = 0; // 000000000000000004c2b624ed5d7756c508d90fd0da2c7c679febfa6c4735f0
         consensus.BIP66Height = 0; // 00000000000000000379eaa19dce8c9b722d46ae6a57c2f1a988119488b50931
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -155,7 +155,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000"); // berycoin
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f"); //453354
+        consensus.defaultAssumeValid = uint256S("0x000039fee49436667b67e73213ceb564f08877929b140af55526b43d1f1bbcb0"); //453354
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -170,13 +170,13 @@ public:
         nPruneAfterHeight = 100000;
         startNewChain = true;
 
-        genesis = CreateGenesisBlock(1527935995, 34419, 0x1f00ffff, 1, 950 * COIN);
+        genesis = CreateGenesisBlock(1528387584, 6375, 0x1f00ffff, 1, 950 * COIN);
 
         if (startNewChain)
             MineGenesis(genesis, consensus.powLimit, true);
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000039fee49436667b67e73213ceb564f08877929b140af55526b43d1f1bbcb0"));
         assert(genesis.hashMerkleRoot == uint256S("0xe233566523dd01e17b9be5b69980c2b7b3b45cf392fb77acae3c0caa76656113"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
@@ -199,7 +199,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                { 0, uint256S("0x000064a7d7f76220346f2ab8d9db0c41a42e02718443b7b25524de9bbefe440f")},
+                { 0, uint256S("0x000039fee49436667b67e73213ceb564f08877929b140af55526b43d1f1bbcb0")},
             }
         };
 
