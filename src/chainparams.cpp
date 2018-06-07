@@ -168,7 +168,7 @@ public:
         pchMessageStart[3] = 0xfd;
         nDefaultPort = 9947;
         nPruneAfterHeight = 100000;
-        startNewChain = true;
+        startNewChain = false;
 
         genesis = CreateGenesisBlock(1528387584, 6375, 0x1f00ffff, 1, 950 * COIN);
 
