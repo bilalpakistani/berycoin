@@ -80,7 +80,7 @@ static const bool DEFAULT_WHITELISTRELAY = true;
 /** Default for DEFAULT_WHITELISTFORCERELAY. */
 static const bool DEFAULT_WHITELISTFORCERELAY = true;
 /** Default for -minrelaytxfee, minimum relay fee for transactions */
-static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 4000000;
+static const unsigned int DEFAULT_MIN_RELAY_TX_FEE = 16000000;
 //! -maxtxfee default
 static const CAmount DEFAULT_TRANSACTION_MAXFEE = 100 * COIN;
 //! Discourage users to set fees higher than this amount (in satoshis) per kB
@@ -182,8 +182,8 @@ static const int DEFAULT_STOPATHEIGHT = 0;
 
 static const uint64_t DEFAULT_GAS_LIMIT_OP_CREATE=2500000;
 static const uint64_t DEFAULT_GAS_LIMIT_OP_SEND=250000;
-static const CAmount DEFAULT_GAS_PRICE=0.00000040*COIN;
-static const CAmount MAX_RPC_GAS_PRICE=0.00000100*COIN;
+static const CAmount DEFAULT_GAS_PRICE=0.00000400*COIN;
+static const CAmount MAX_RPC_GAS_PRICE=0.00001000*COIN;
 
 static const size_t MAX_CONTRACT_VOUTS = 1000; // berycoin
 
