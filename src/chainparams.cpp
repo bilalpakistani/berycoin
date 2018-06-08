@@ -282,7 +282,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("berycoin4.dynu.net", false); // Berycoin testnet
+        vSeeds.emplace_back("testnet-dnsseed.berycoin.com", false); // Berycoin testnet
+        
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,11);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,106);
