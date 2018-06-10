@@ -308,7 +308,7 @@ public:
             // Data as of block 493cccf2ba87ffdabd7afc0f3242c1357fdebdc0b8c7e7adc3c6dc2b1c8ca797 (height 79167)
             0,
             0,
-            0
+            0.125
         };
 
         consensus.nLastPOWBlock = 5000;
