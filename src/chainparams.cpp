@@ -311,7 +311,7 @@ public:
             0.125
         };
 
-        consensus.nLastPOWBlock = 5000;
+        consensus.nLastPOWBlock = 2000;
         consensus.nMPoSRewardRecipients = 10;
         consensus.nFirstMPoSBlock = consensus.nLastPOWBlock + 
                                     consensus.nMPoSRewardRecipients + 
