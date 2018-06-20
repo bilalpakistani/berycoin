@@ -266,7 +266,7 @@ then
         echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit berycoin=${COMMIT},cpp-eth-berycoin=develop --url berycoin=${url},cpp-eth-berycoin=${ethurl} ../berycoin/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gbuild --commit berycoin=${COMMIT},cpp-eth-berycoin=develop --url berycoin=${url},cpp-eth-berycoin=${ethurl} ../berycoin/contrib/gitian-descriptors/gitian-linux.yml
 	    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../berycoin/contrib/gitian-descriptors/gitian-linux.yml
 	    mv build/out/berycoin-*.tar.gz build/out/src/berycoin-*.tar.gz ../berycoin-binaries/${VERSION}
 	fi
@@ -276,7 +276,7 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit berycoin=${COMMIT},cpp-eth-berycoin=develop --url berycoin=${url},cpp-eth-berycoin=${ethurl} ../berycoin/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gbuild --commit berycoin=${COMMIT},cpp-eth-berycoin=develop --url berycoin=${url},cpp-eth-berycoin=${ethurl} ../berycoin/contrib/gitian-descriptors/gitian-win.yml
 	    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../berycoin/contrib/gitian-descriptors/gitian-win.yml
 	    mv build/out/berycoin-*-win-unsigned.tar.gz inputs/berycoin-win-unsigned.tar.gz
 	    mv build/out/berycoin-*.zip build/out/berycoin-*.exe ../berycoin-binaries/${VERSION}
@@ -287,7 +287,7 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit berycoin=${COMMIT},cpp-eth-berycoin=develop --url berycoin=${url},cpp-eth-berycoin=${ethurl} ../berycoin/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gbuild --commit berycoin=${COMMIT},cpp-eth-berycoin=develop --url berycoin=${url},cpp-eth-berycoin=${ethurl} ../berycoin/contrib/gitian-descriptors/gitian-osx.yml
 	    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../berycoin/contrib/gitian-descriptors/gitian-osx.yml
 	    mv build/out/berycoin-*-osx-unsigned.tar.gz inputs/berycoin-osx-unsigned.tar.gz
 	    mv build/out/berycoin-*.tar.gz build/out/berycoin-*.dmg ../berycoin-binaries/${VERSION}
@@ -368,7 +368,7 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=master ../berycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../berycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
 	    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../berycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
 	    mv build/out/berycoin-osx-signed.dmg ../berycoin-binaries/${VERSION}/berycoin-${VERSION}-osx.dmg
 	fi
